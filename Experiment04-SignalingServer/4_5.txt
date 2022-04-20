@@ -1,0 +1,14 @@
+case "offer":
+        console.log("Sending offer to", data.name);
+        var conn = users[data.name];
+
+        if (conn != null) {
+          connection.otherName = data.name;
+          sendTo(conn, {
+            type: "offer",
+            offer: data.offer,
+            name: connection.name
+          });
+        }
+
+        break;

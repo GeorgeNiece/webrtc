@@ -1,0 +1,5 @@
+var peerConnection = new RTCPeerConnection();
+
+// Establish your peer connection using signaling here
+
+var dataChannel = peerConnection.createDataChannel("myLabel", dataChannelOptions);

@@ -1,0 +1,13 @@
+case "answer":
+        console.log("Sending answer to", data.name);
+        var conn = users[data.name];
+
+        if (conn != null) {
+          connection.otherName = data.name;
+          sendTo(conn, {
+            type: "answer",
+            answer: data.answer
+          });
+        }
+
+        break;

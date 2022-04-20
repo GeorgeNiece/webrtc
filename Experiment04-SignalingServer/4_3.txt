@@ -1,0 +1,10 @@
+connection.on('message', function (message) {
+    var data;
+
+    try {
+      data = JSON.parse(message);
+    } catch (e) {
+      console.log("Error parsing JSON");
+      data = {};
+    }
+});

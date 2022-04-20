@@ -1,0 +1,16 @@
+dataChannel.onerror = function (error) {
+  console.log("Data channel error:", error);
+};
+
+dataChannel.onmessage = function (event) {
+  console.log("Data channel message:", event.data);
+};
+
+dataChannel.onopen = function () {
+  console.log("Data channel opened, ready to send messages!");
+  dataChannel.send("Hello World!");
+};
+
+dataChannel.onclose = function () {
+  console.log("Data channel has been closed.");
+};

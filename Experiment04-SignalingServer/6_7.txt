@@ -1,0 +1,7 @@
+// Bind our text input and received area
+sendButton.addEventListener("click", function (event) {
+  var val = messageInput.value;
+  received.innerHTML += "send: " + val + "<br />";
+  received.scrollTop = received.scrollHeight;
+  dataChannel.send(val);
+});

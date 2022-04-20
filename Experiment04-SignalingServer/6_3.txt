@@ -1,0 +1,4 @@
+var dataChannelOptions = {
+  reliable: false,
+  maxRetransmitTime: 3000
+};

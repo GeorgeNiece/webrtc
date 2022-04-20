@@ -1,0 +1,13 @@
+dataChannel.onmessage = function (event) {
+  var data = event.data;
+
+  if (data instanceof Blob) {
+    // handle Blob
+  } else if (data instanceof ArrayBuffer) {
+    // handle ArrayBuffer
+  } else if (data instanceof ArrayBufferView) {
+    // handle ArrayBufferView
+  } else {
+    // handle string
+  }
+};

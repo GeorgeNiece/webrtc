@@ -1,0 +1,12 @@
+case "leave":
+        console.log("Disconnecting user from", data.name);
+        var conn = users[data.name];
+        conn.otherName = null;
+
+        if (conn != null) {
+          sendTo(conn, {
+            type: "leave"
+          });
+        }
+
+        break;
